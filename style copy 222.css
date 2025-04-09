@@ -1,0 +1,428 @@
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .text2, .text3 {
+    font-size: 120%;
+    padding: 0 10px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: auto;
+  }
+}
+
+body {
+  background: rgb(31, 31, 31);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.socials-container {
+  display: flex;
+  gap: 25px;
+}
+.socials-container a {
+background-color: rgb(243, 243, 243);
+padding: 0.8em;
+border-radius: 50%;
+height: 64px;
+width: 64px;
+box-sizing: border-box;
+flex-shrink: 0;
+display: grid;
+place-items: center;
+box-shadow: 0cap;
+transform: translateY(200px);
+}
+.socials-container a svg {
+  height: 30px;
+}
+.socials-container a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color:var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  transform: translateY(-20px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms ease;
+}
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white
+}
+.socials-container a::after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0)rotate(25deg);
+  opacity: 0;
+  transition: 200ms ease;
+  
+}
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+.socials-container a:hover:after {
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
+.socials-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(550px);
+  margin-top: 10dvb;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+}
+
+nav .nav-bar{
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  background-color: rgb(69, 146, 233);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(5px);
+}
+nav .nav-bar .logo a{
+  font-size: 40px;
+   font-weight: 900;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   letter-spacing: 3px;
+   text-shadow: 0 0 50px rgb(0, 0, 0)
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .nav-links li{
+  margin: 0 5px;
+  list-style: none;
+}
+.nav-links li a{
+  position: relative;
+  font-size: 27px;
+  font-weight: 750;
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  padding: 10px;
+  text-shadow: 0 0 50px rgb(0, 0, 0);
+}
+.nav-bar li a::before {
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+  transform: translateX(50%);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgb(199, 189, 52);
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 50px rgb(0, 0, 0);
+}
+.nav-links li:hover a::before {
+  opacity: 1;
+}
+* {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(71, 71, 71)
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(185, 186, 187);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.profile-image {
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width:  265px;
+  height: 500vb;
+  border-radius: 500dvb;
+  overflow: hidden;
+  box-shadow:
+   0 0 50px rgb(146, 146, 146);
+  object-position: 5% 70%;
+  transform: translateY(-108px);
+}
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.5em 1em;
+  transform: translateY(-69px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: rgb(24, 26, 26);
+  border: 10px solid rgb(44, 43, 43);
+
+  transition:all 0.3s;
+  box-shadow: 0 0 30px rgb(0, 0, 0)
+}
+.btn:hover {
+  transform: translateY(-55px);
+  background-color: rgb(44, 43, 43);
+  color: rgb(247, 247, 247);
+
+}
+.text2 {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-45px);
+  color: #fff;
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 6px 1px rgba(0,0,0,0.1),
+    0 0 5px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.3),
+    0 3px 5px rgba(0,0,0,0.2),
+    0 5px 10px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.2),
+    0 20px 20px rgba(0,0,0,0.15);
+
+}
+.text3 {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 1000;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-28px);
+  color: #fff;
+  text-shadow: 
+    0 6px 1px rgba(0,0,0,0.1),
+    0 0 5px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.3),
+    0 3px 5px rgba(0,0,0,0.2),
+    0 5px 10px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.2),
+    0 20px 20px rgba(0,0,0,0.15);
+
+}
+/* เบอเก้ออออออออออออออ */
+.burger {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 1000;
+}
+.burger {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.burger {animation-delay: 0.2s;}
+
+
+/* เบอเก้อบาร์ */
+.burger div {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+/* เบอเก้อ อนิเมชั่นกากๆ */
+.burger.change .bar1 {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.burger.change .bar2 {
+  opacity: 0;
+}
+
+.burger.change .bar3 {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* เมนู */
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #0c0c0c;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+.menu.show {
+  opacity: 5;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/* ข้อควา,ในเบอเก้ออออ */
+.menu a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+/* อนิเมชั่นข้อความ */
+.menu a:hover {
+  transform: translateY(-2px);
+  color:rgb(184, 179, 179)
+}
+.about-me {
+  color: white;
+  font-size: larger;
+  text-align: center;
+  transform: translateY(35px);
+}
+.profile-image {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.profile-image{animation-delay: 0.6s;}
+
+.text2{
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  .text2{animation-delay: 0.8s;}
+.text3 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  .text3 {animation-delay: 1s;}
+    .btn {
+   
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards;
+      }
+      
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .btn {animation-delay: 0.8s;}
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        font-family: 'Sarabun', sans-serif;
+      }
+      .about-me {
+        transform: translateY(300px);
+      }
+  @keyframes apper {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to{
+      opacity: 1;
+      scale: 1;
+    }
+    }
+
+    .socail-container {
+      animation: appear 5s linear;
+    }
